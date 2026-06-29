@@ -1,0 +1,14 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Component · Text inputs" subtitle="Default + focused (cyan border)" viewport="700x220" --><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+html,body{margin:0;background:var(--qx-bg-2);color:var(--qx-fg-1);font-family:var(--qx-font-body);}
+.card{padding:22px 28px;display:flex;flex-direction:column;gap:14px;}
+.field{display:flex;flex-direction:column;gap:6px;}
+.field label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#B5B5B5;font-weight:500;}
+.field input{background:#161616;border:1px solid rgba(255,255,255,.12);color:#fff;font-family:var(--qx-font-body);font-size:15px;padding:12px 14px;border-radius:4px;outline:none;transition:border-color .2s;}
+.field input:focus{border-color:#00FFEF;}
+.field.focused input{border-color:#00FFEF;}
+</style></head><body><div class="card">
+  <div class="field"><label>Nombre</label><input type="text" value="Diego Martínez"></div>
+  <div class="field focused"><label>Email · focused</label><input type="email" value="diego@qudox.com"></div>
+</div></body></html>

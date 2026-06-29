@@ -1,0 +1,16 @@
+<!doctype html>
+<!-- @dsCard group="Spacing" name="Spacing · Corner radii" subtitle="0 · 4 · 8 · 16 · pill" viewport="700x160" --><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+html,body{margin:0;background:var(--qx-bg-2);color:var(--qx-fg-1);font-family:var(--qx-font-body);}
+.card{padding:22px 28px;display:flex;gap:18px;align-items:center;justify-content:space-around;}
+.shape{display:flex;flex-direction:column;align-items:center;gap:8px;}
+.box{width:90px;height:60px;background:#1E1E1E;border:1px solid rgba(255,255,255,.18);}
+.lbl{font-family:var(--qx-font-mono);font-size:11px;color:#888;}
+.val{font-family:var(--qx-font-mono);font-size:11px;color:#fff;}
+</style></head><body><div class="card">
+  <div class="shape"><div class="box" style="border-radius:0;"></div><span class="val">0</span><span class="lbl">none</span></div>
+  <div class="shape"><div class="box" style="border-radius:4px;"></div><span class="val">4</span><span class="lbl">--radius-sm</span></div>
+  <div class="shape"><div class="box" style="border-radius:8px;"></div><span class="val">8</span><span class="lbl">--radius-md</span></div>
+  <div class="shape"><div class="box" style="border-radius:16px;"></div><span class="val">16</span><span class="lbl">--radius-lg</span></div>
+  <div class="shape"><div class="box" style="border-radius:999px;"></div><span class="val">pill</span><span class="lbl">--radius-pill</span></div>
+</div></body></html>
