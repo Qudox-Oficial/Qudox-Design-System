@@ -1,12 +1,22 @@
-# Qudox · Fonts
+# Fuentes — Qudox
 
-All brand fonts are **self-hosted** here — no CDN dependency. Wired via `@font-face` in `../colors_and_type.css`.
+Archivos de fuente oficiales de la marca, ya curados (no son todos los pesos disponibles de Google Fonts — solo los que la marca usa). Quien genere una pieza debe usar estos archivos exactos.
 
-## Display — `EmpowerSerif`
-`EmpowerSerif.ttf` — proprietary high-contrast serif used for italic titulares, displays, and brand emphasis. The face is intrinsically italic, so it is declared `font-style: italic` in its `@font-face` to avoid a synthetic double-slant when `.qx-display` applies italic. Token: `--qx-font-display`.
+## Newsreader (títulos)
 
-## Body — `Manrope`
-`Manrope-VariableFont_wght.ttf` — variable weight (200–800). Weights in use: **400 Regular**, **500 Medium**, **700 Bold**. Token: `--qx-font-body`.
+- `Newsreader-36pt-SemiBoldItalic.ttf` — para títulos de tamaño intermedio (slides de contenido).
+- `Newsreader-60pt-SemiBoldItalic.ttf` — para títulos grandes (portadas, cierres).
 
-## Mono — system stack
-No bespoke mono. Uses the system stack `ui-monospace, "SF Mono", Menlo`. Token: `--qx-font-mono`.
+> Nota: Newsreader es una fuente "óptica" — el "36pt" o "60pt" en el nombre no es el tamaño en el que la vas a usar necesariamente, es la variante con la que fue diseñada para verse mejor en ese rango de tamaño. Si necesitás un título a 88-96pt (como portada), usá el archivo de 60pt — sigue siendo la opción más fiel.
+
+## Manrope (todo lo demás)
+
+- `Manrope-Regular.ttf`
+- `Manrope-Medium.ttf`
+- `Manrope-SemiBold.ttf`
+- `Manrope-Bold.ttf`
+- `Manrope-ExtraBold.ttf`
+
+## Licencias
+
+Ambas fuentes son de uso libre bajo la Open Font License (Google Fonts). Ver `OFL-Newsreader.txt` y `OFL-Manrope.txt`.
