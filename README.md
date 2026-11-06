@@ -8,7 +8,7 @@ Tiene **2 archivos, uno por herramienta.** No son intercambiables — cada uno r
 
 | Herramienta | Archivo a subir | Cómo resuelve portada/footers |
 | --- | --- | --- |
-| **Claude** (Chat o Design) | `QUDOX-DESIGN-SYSTEM.md` | Descarga las imágenes por URL en el momento (repo público `qudox-visual-assets`) |
+| **Claude** (Chat o Design) | `QUDOX-DESIGN-SYSTEM.md` | Descarga las imágenes por URL en el momento, desde `fuente-editable/surfaces-assets/` de este repo |
 | **ChatGPT** | `QUDOX-DESIGN-SYSTEM-CHATGPT.md` | Las imágenes ya están adentro del archivo, codificadas en base64 — no descarga nada |
 
 **Si subís el archivo equivocado a la herramienta equivocada, no va a funcionar bien** — por ejemplo, ChatGPT no puede descargar desde una URL, así que si le das el archivo de Claude, va a fallar al querer traer la portada o el footer (o va a improvisar algo parecido, que es peor). Fijate siempre en el nombre exacto del archivo antes de subirlo.
@@ -29,9 +29,9 @@ Contiene los archivos separados por tema (`00` a `06`), la carpeta `logo/` con l
 
 Acá es donde se edita el sistema cuando cambia algo (un color, una regla, el logo, una nueva URL de asset). Cuando termina una edición, se vuelve a armar `QUDOX-DESIGN-SYSTEM.md` juntando los cambios, y se reemplaza el archivo de `sistema-consolidado/`.
 
-## Repositorio relacionado
+## Assets de portada y footers
 
-`Qudox-Oficial/qudox-visual-assets` — repositorio público, solo con las imágenes de portada y footers (texturas fotográficas que no se pueden convertir a texto). **Solo lo usa la versión de Claude** (`QUDOX-DESIGN-SYSTEM.md`), que descarga las imágenes automáticamente desde ahí — ver sección 6.12.2. La versión de ChatGPT no depende de este repositorio: ya tiene las imágenes adentro, en base64.
+Las imágenes de portada y footers (texturas fotográficas que no se pueden convertir a texto) viven en `fuente-editable/surfaces-assets/presentaciones/`, dentro de este mismo repositorio público. Antes estaban en un repo aparte (`qudox-visual-assets`), que ya no se usa. **Solo las descarga la versión de Claude** (`QUDOX-DESIGN-SYSTEM-CLAUDE.md`), por URL — ver sección 6.12.2. La versión de ChatGPT no depende de este repositorio: ya tiene las imágenes adentro, en base64.
 
 Si se actualiza un asset acá, hay que actualizar **las dos versiones** del sistema consolidado — la de Claude (cambia la URL si cambia el nombre del archivo) y la de ChatGPT (hay que regenerar el bloque base64 con el archivo nuevo).
 
@@ -42,5 +42,5 @@ Si se actualiza un asset acá, hay que actualizar **las dos versiones** del sist
 | Conectar el sistema a Claude | `sistema-consolidado/QUDOX-DESIGN-SYSTEM.md` |
 | Conectar el sistema a ChatGPT | `sistema-consolidado/QUDOX-DESIGN-SYSTEM-CHATGPT.md` |
 | Editar un color, una regla, o el logo | `fuente-editable/` |
-| Agregar o cambiar un asset de portada/footer | `fuente-editable/surfaces-assets/`, subir al repo público `qudox-visual-assets`, y actualizar **las dos** versiones consolidadas |
+| Agregar o cambiar un asset de portada/footer | `fuente-editable/surfaces-assets/`, y actualizar **las dos** versiones consolidadas |
 | Ver qué cambió recientemente | `CHANGELOG.md`, en la raíz |

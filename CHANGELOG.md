@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11 — Un solo repositorio público
+
+- **Se unifica todo en `Qudox-Oficial/Qudox-Design-System`**, ahora público. Las URLs de portada y footers (sección 6.12.2) dejan de apuntar a `qudox-visual-assets` y apuntan a `fuente-editable/surfaces-assets/presentaciones/` de este repo. Cambiado en `06-presentaciones.md` y en `QUDOX-DESIGN-SYSTEM-CLAUDE.md`.
+- Los archivos eran idénticos byte a byte en ambos repos, así que no cambia ninguna imagen.
+- Se actualizan las menciones a "repositorio privado" en los dos consolidados y en el `README.md`.
+- `qudox-visual-assets` queda sin uso y se puede archivar una vez que este cambio esté en `main`.
+
 ## 2026-08 — Nuevo section-divider (banda lateral)
 
 - **Rediseño del `section-divider`** (sección 3.3 de presentaciones): reemplaza la versión anterior (patrón de líneas en el tercio inferior) por una de banda lateral vertical + número de sección + título en Newsreader + logo horizontal en la esquina superior derecha, sobre fondo `#0D1512`. Marcado como `[ACTIVO — PROVISIONAL]` hasta que el diseñador entregue la versión final en las próximas semanas.

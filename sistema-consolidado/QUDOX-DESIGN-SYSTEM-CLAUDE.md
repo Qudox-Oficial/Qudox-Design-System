@@ -69,14 +69,14 @@ Este es un único archivo. Antes vivía como 7 archivos separados (`00` a `06`);
 
 Este archivo reemplaza a los 7 archivos separados más la carpeta `logo/` en formato SVG, para el uso de Claude Proyectos y herramientas de IA similares. Motivo: el conector de GitHub estaba contando cada archivo del repo (fuentes, PNG, SVG por separado) contra el límite de capacidad del Proyecto, aunque el peso real en texto fuera mínimo — esto disparaba el modo de búsqueda (RAG) antes de lo necesario, fragmentando las reglas de marca en vez de tenerlas todas presentes a la vez.
 
-**Qué vive acá adentro:** las 6 secciones de contenido, el vector real del logo (sección 4), y las URLs de descarga de los assets fotográficos de portada/footers (sección 6.12.2) — apuntan al repositorio público `Qudox-Oficial/qudox-visual-assets`.
+**Qué vive acá adentro:** las 6 secciones de contenido, el vector real del logo (sección 4), y las URLs de descarga de los assets fotográficos de portada/footers (sección 6.12.2) — apuntan a `fuente-editable/surfaces-assets/` de este mismo repositorio (`Qudox-Oficial/Qudox-Design-System`).
 
 **Qué se queda afuera de este archivo, y por qué:**
-- **Fuentes (`.ttf`):** no hacen falta para generar una pieza (el texto sale como texto real, no renderizado). Solo las necesita un humano para abrir el `.pptx` final en PowerPoint — quedan en el repositorio privado para descarga.
-- **Los archivos de imagen en sí** (portada, footers): no se pueden convertir a texto sin perder calidad (son textura fotográfica, no geometría) — se descargan en el momento desde el repositorio público, según la sección 6.12.2. No hace falta adjuntarlos manualmente al chat.
+- **Fuentes (`.ttf`):** no hacen falta para generar una pieza (el texto sale como texto real, no renderizado). Solo las necesita un humano para abrir el `.pptx` final en PowerPoint — quedan en `fuente-editable/fonts/` del repositorio para descarga.
+- **Los archivos de imagen en sí** (portada, footers): no se pueden convertir a texto sin perder calidad (son textura fotográfica, no geometría) — se descargan en el momento desde el repositorio, según la sección 6.12.2. No hace falta adjuntarlos manualmente al chat.
 - **PNG del logo en alta resolución:** solo para imprenta y uso humano directo, no hacen falta para generar piezas.
 
-Los archivos numerados (`00` a `06`) siguen existiendo en el repositorio privado como fuente editable de cada sección; este archivo único se arma juntándolos. Cualquier corrección de contenido se hace en el archivo separado correspondiente y después se vuelve a consolidar.
+Los archivos numerados (`00` a `06`) siguen existiendo en `fuente-editable/` del repositorio como fuente editable de cada sección; este archivo único se arma juntándolos. Cualquier corrección de contenido se hace en el archivo separado correspondiente y después se vuelve a consolidar.
 
 ---
 
@@ -920,26 +920,26 @@ Ningún título, subtítulo, párrafo, número, fecha o nombre de cliente va inc
 
 ### 6.12.2 Cómo obtener los assets de portada y footers (2026-07-08)
 
-Estos archivos son arte de marca real (texturas fotográficas y patrones compuestos) y **no se generan**: se descargan de su URL oficial al momento de armar la presentación. Viven en un repositorio público separado, solo de assets visuales (sin texto de marca ni estrategia): `Qudox-Oficial/qudox-visual-assets`.
+Estos archivos son arte de marca real (texturas fotográficas y patrones compuestos) y **no se generan**: se descargan de su URL oficial al momento de armar la presentación. Viven en este mismo repositorio (`Qudox-Oficial/Qudox-Design-System`), en `fuente-editable/surfaces-assets/presentaciones/`.
 
 - **Portada y cierre** (`fondo-portada.jpg`):
-  `https://raw.githubusercontent.com/Qudox-Oficial/qudox-visual-assets/main/surfaces-assets/presentaciones/fondo-portada.jpg`
+  `https://raw.githubusercontent.com/Qudox-Oficial/Qudox-Design-System/main/fuente-editable/surfaces-assets/presentaciones/fondo-portada.jpg`
 
 - **Footer con logo editable** (`footer-listo-para-logo.png`, ver sección 6.12.1):
-  `https://raw.githubusercontent.com/Qudox-Oficial/qudox-visual-assets/main/surfaces-assets/presentaciones/footer-listo-para-logo.png`
+  `https://raw.githubusercontent.com/Qudox-Oficial/Qudox-Design-System/main/fuente-editable/surfaces-assets/presentaciones/footer-listo-para-logo.png`
 
 - **Footer todo-en-uno, sin logo editable** (`banda-footer-fondo-claro.png`):
-  `https://raw.githubusercontent.com/Qudox-Oficial/qudox-visual-assets/main/surfaces-assets/presentaciones/banda-footer-fondo-claro.png`
+  `https://raw.githubusercontent.com/Qudox-Oficial/Qudox-Design-System/main/fuente-editable/surfaces-assets/presentaciones/banda-footer-fondo-claro.png`
 
 - **Banda lateral del `section-divider`** (`banda-lateral-verde-divider.jpg`, ver sección 6.3.3):
-  `https://raw.githubusercontent.com/Qudox-Oficial/qudox-visual-assets/main/surfaces-assets/presentaciones/banda-lateral-verde-divider.jpg`
+  `https://raw.githubusercontent.com/Qudox-Oficial/Qudox-Design-System/main/fuente-editable/surfaces-assets/presentaciones/banda-lateral-verde-divider.jpg`
 
 - **Banda lateral, layout alternativo** (sección 6.10):
-  `https://raw.githubusercontent.com/Qudox-Oficial/qudox-visual-assets/main/surfaces-assets/presentaciones/banda-lateral-patron-verde-1.png`
-  `https://raw.githubusercontent.com/Qudox-Oficial/qudox-visual-assets/main/surfaces-assets/presentaciones/banda-lateral-patron-verde-2.png`
+  `https://raw.githubusercontent.com/Qudox-Oficial/Qudox-Design-System/main/fuente-editable/surfaces-assets/presentaciones/banda-lateral-patron-verde-1.png`
+  `https://raw.githubusercontent.com/Qudox-Oficial/Qudox-Design-System/main/fuente-editable/surfaces-assets/presentaciones/banda-lateral-patron-verde-2.png`
 
 - **Patrón de líneas** (`patron-lineas-decorativas-oscura.png`) — `[REEMPLAZADO como divider]`, se mantiene solo para la variante oscura (sección 6.9, pausada):
-  `https://raw.githubusercontent.com/Qudox-Oficial/qudox-visual-assets/main/surfaces-assets/presentaciones/patron-lineas-decorativas-oscura.png`
+  `https://raw.githubusercontent.com/Qudox-Oficial/Qudox-Design-System/main/fuente-editable/surfaces-assets/presentaciones/patron-lineas-decorativas-oscura.png`
 
 Descargá el archivo correspondiente e insertalo según las medidas ya documentadas (sección 6.12.1 para footers, sección 6.3.1 para portada). **Si la descarga falla, avisá explícitamente — no improvises un reemplazo ni generes el deck sin portada/footer en silencio.**
 
